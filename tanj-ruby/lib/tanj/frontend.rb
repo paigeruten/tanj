@@ -5,7 +5,8 @@ module Tanj
     end
 
     def receive(line)
-      # assume line starts with "tanj| "
+      return unless line.start_with? "tanj| "
+
       event = JSON.parse(line[6..-1], symbolize_names: true)
       @events.push event
       if event[:type] == 'array'

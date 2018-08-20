@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'tanj'
+
+status = Tanj::CLI.new.run(ARGV)
+exit! if status == false

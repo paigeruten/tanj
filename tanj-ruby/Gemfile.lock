@@ -1,0 +1,28 @@
+PATH
+  remote: .
+  specs:
+    tanj (0.0.1)
+      binding_of_caller (~> 0.8)
+      paint (~> 2.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    binding_of_caller (0.8.0)
+      debug_inspector (>= 0.0.1)
+    debug_inspector (0.0.3)
+    minitest (5.11.3)
+    paint (2.0.1)
+    rake (10.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.16)
+  minitest (~> 5.0)
+  rake (~> 10.0)
+  tanj!
+
+BUNDLED WITH
+   1.16.1

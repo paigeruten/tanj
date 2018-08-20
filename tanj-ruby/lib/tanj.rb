@@ -1,9 +1,11 @@
-require 'binding_of_caller' # TODO: bundler this
+require 'binding_of_caller'
 require 'json'
-require 'paint' # TODO: bundler this
+require 'paint'
 
+require 'tanj/cli'
 require 'tanj/frontend'
 require 'tanj/logger'
+require "tanj/version"
 
 module Tanj
   @@logger = Logger::Stderr.new
