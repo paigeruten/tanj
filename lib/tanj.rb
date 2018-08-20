@@ -1,6 +1,14 @@
 require 'json'
 
+require 'tanj/logger'
+
 module Tanj
+  @@logger = Logger::Stderr.new
+
+  def self.config(options)
+    @@logger = options[:logger] unless options[:logger].nil?
+  end
+
   def self.array(value, name, options = {})
     log(caller_locations[0], type: "array", value: value, name: name, options: options)
   end
@@ -21,6 +29,6 @@ module Tanj
 
   def self.log(location, hash)
     hash[:where] = {line_num: location.lineno, path: location.absolute_path, label: location.label}
-    $stderr.puts "tanj| #{hash.to_json}"
+    @@logger.log "tanj| #{hash.to_json}"
   end
 end

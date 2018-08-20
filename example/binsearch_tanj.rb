@@ -2,6 +2,10 @@ $LOAD_PATH.unshift(File.expand_path('../lib', __dir__))
 
 require 'tanj'
 
+Tanj.config(
+  logger: Tanj::Logger::Self.new
+)
+
 def binsearch(ary, x)
   left = 0
   right = ary.length - 1
