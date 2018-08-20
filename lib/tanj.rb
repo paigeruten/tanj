@@ -1,5 +1,7 @@
 require 'json'
+require 'paint' # TODO: bundler this
 
+require 'tanj/frontend'
 require 'tanj/logger'
 
 module Tanj
